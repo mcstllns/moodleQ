@@ -1,0 +1,15 @@
+Package: moodleQ
+Title: Creación de preguntas en xml moodle.
+Version: 0.5.3
+Authors@R: 
+    person(given = "Miguel A.",
+           family = "Castellanos",
+           role = c("aut", "cre"),
+           email = "mcastellanos@ucm.es",
+           comment = c(Web = "https://mcastellanos.ucm.es"))
+Description: Gestión de preguntas desde un marco de clases R6.
+License: What license it uses
+Encoding: UTF-8
+LazyData: true
+Imports: XML, R6, base64enc
+RoxygenNote: 7.1.0
