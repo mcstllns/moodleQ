@@ -1,75 +1,65 @@
-# moodleQ
-Construcción y manejo de preguntas de moodle con clases R6
 
-## Objetivo
-MoodelQ permite crear facilmente preguntas de lo sprincipales tipos que tiene moodle. Estas preguntas se salvan en un fichero xml que es importado en moodle dentro de su banco de preguntas. Este sistema es mucho más rápido que crear una a una las preguntas usando la tediosa interfaz de moodle. Este documento explica con ejemplos como utilizar la librería y está basado en el formato xml de moodle expresado en la página de la documentacion de moodle: [enlace](https://docs.moodle.org/38/en/Moodle_XML_format).
+<span style="font-size:80px"><i>moodle</i></span><span style="font-size:100px"><b><i>Q</i></b></span>
+<span style="font-size:20px">0.5.3</span>
 
-Está en una fasemuy preliminar por lo que se debe usar con cuidado y se recuerda que carece totalmente de garantía sobre su funcionamiento.
 
-Un ejemplo sencillo de su uso sería:
+***
+__Miguel A. Castellanos__
 
-```R
-q1 <- question$new(
-  type="multichoice",
-  'name' = "P001",
-  'question' = "Enunciado",
-  'answer' = list("Alternativa 1", 100),
-  'answer' = list("Alternativa 2"),
-  'answer' = list("Alternativa 3"))
+mcastellanos\@psi.ucm.es
 
-Q <- quiz$new()
-Q$save_xml("mifichero.xml")
+Universidad Complutense de Madrid
 
-```
-El código anterior genera una pregunta de elección múltiple con tres alternativas (la primera es la correcta) que es guardado en el fichero "mifichero.xml" que puede ser importado en moodle.
+***
+__moodleQ__ es una librería de R para la creación de bancos de preguntas para moodle desde una perspectiva basada en clases R6 y programación orientada a objetos (POO), permite crear fácilmente preguntas de los principales tipos que tiene moodle. Las preguntas se salvan en un fichero xml que es importado en moodle dentro de su banco de preguntas, este sistema es mucho más rápido que crear una a una las preguntas usando la interfaz gráfica de moodle y permite diseñar cuestionarios más complejos.
 
-## Instalación
+***
 
-El paquete se puede instalar via devtools y github
+## Instalación y primeros pasos
+
+El paquete se puede instalar vía devtools y github
 
 ```R
 devtools::install_github("mcstllns/moodleQ")
 ```
 
-Si no está instalado previamente devtools puede instalarse
+Si no está instalado previamente devtools puede instalarse con
 
 ```R
 install.packages("devtools")
 ```
-y una vez instalado el paquete cargado con
-```{r}
+
+y una vez instalado el paquete se carga con
+```R
 library(moodleQ)
 ```
 
-## Crear un cuestionario sencillo
-Las preguntas se pueden crear llamando al constructor _question$new()_. Los argumantos de la función son los parametros que definen la pregunta. Cada tipo de pregunta tiene definido unos parametros o campos por defecto como se verá más adelante. Los tipos de preguntas de moodle que están definidas son las siguoentes:
+Las preguntas se crean invocando al constructor _question$new()_. Los argumentos de la función son los parámetros que definen una pregunta. Cada tipo de pregunta tiene definidos unos parámetros o campos por defecto que hay que completar para que sea una pregunta válida, muchos de esos parámetros han sido definidos por defecto, aunque se pueden modificar (ver las configuraciones por defecto al final de este documento); por ejemplo, se pueden modificar los argumentos _single_, _shuffleanswer_ y _answernumbering_ para cambiar la forma de marcar, la aleatorización y el numerado de las alternativas de la pregunta respectivamente. 
 
-* multichoice
-* truefalse
-* shortanswer
-* essay
-* numerical
-* description
-
-Los tipo de preguntas matching y cloze no han sido implementado aún porque son absolutamente inútiles para trabajar con universitarios aprendiendo disciplinas técnicas.
-
-El siguiente código crea una pregunta categorica (todo lo que venga despues de ella será clasificado en esa categoria) y una elección multiple, empaquetadas ambas en un cuestionario:
-```{r}
-q0 <- question$new(
-  type="category",
-  'name' = 'P000',
-  'category' = "$course$/pruebas_moodleQ")
-
+```R
 q1 <- question$new(
   type="multichoice",
-  'name' = "P001",
-  'question' = "Enunciado",
-  'answer' = list("Alternativa 1", 100),
-  'answer' = list("Alternativa 2"),
-  'answer' = list("Alternativa 3"))
-  
-Q <- quiz$new(q0, q1)
-
+  'name' = "Q001",
+  'question' = "This is the question text",
+  'single' = 'false',
+  'shuffleanswers' = 0,
+  'answernumbering' = 'none',
+  'answer' = list("Answer #1", 100),
+  'answer' = list("Answer #2"),
+  'answer' = list("Answer #3"))
 ```
 
-Para ver el contenido de una pregunta se utiliza el método print o simplemente se escribe el nombre del objeto. Para ver el formato xml de cada pregunta se utiliza el método xml()
+
+![](./docs/images/02.png)
+
+***
+
+## Documentación
+
+* Ir a la página con la documentación: [mcstllns.github.io/moodleQ/](https://mcstllns.github.io/moodleQ/)
+* Descargar la documentación en pdf y con código de ejemplo: [moodleQ-man.zip](./docs/moodleQ-man.zip)
+* Ir a la página de github: [mcstllns/moodleQ](https://github.com/mcstllns/moodleQ)
+
+***
+<span style="font-size:15px;float:right">Miguel A. Castellanos (2020)</span>
+

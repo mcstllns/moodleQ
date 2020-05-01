@@ -30,13 +30,17 @@ question$set("private", "insert",
    if (length(l)==0) return()
    key <- names(l)
    for (i in 1:length(l))
-     if (key[i] == 'question') eval(parse(text= paste("self$prop$", 'questiontext$text$.value', "<-", "l[[i]]")))
-   else if (key[i] == 'dataset') do.call(self$addDataset, l[[i]])
-   else if (key[i] == 'file') do.call(self$addfile, l[[i]])
-   else if (key[i] == 'answer') do.call(self$addanswer, l[[i]])
-   else if (key[i] == 'category') self$prop$category$text$.value <- l[[i]]
-   else if (key[i] == 'name') self$prop$name$text$.value <- l[[i]]
-   else eval(parse(text= paste("self$prop$", key[i], "$.value ", "<-", "l[[i]]")))
+      if (key[i] == 'question') eval(parse(text= paste("self$prop$", 'questiontext$text$.value', "<-", "l[[i]]")))
+      else if (key[i] == 'dataset') do.call(self$addDataset, l[[i]])
+      else if (key[i] == 'file') do.call(self$addfile, l[[i]])
+      else if (key[i] == 'answer') do.call(self$addanswer, l[[i]])
+      else if (key[i] == 'category') self$prop$category$text$.value <- l[[i]]
+      else if (key[i] == 'name') self$prop$name$text$.value <- l[[i]]
+      else if (key[i] == 'format'){
+         self$prop$questiontext$.attrs <- c(format = l[[i]])
+         self$prop$format$.value <- l[[i]]
+      }
+      else eval(parse(text= paste("self$prop$", key[i], "$.value ", "<-", "l[[i]]")))
   })
 
 # -------------------------------------------
@@ -172,9 +176,9 @@ question$set("public", "addDataset",
    }
 
    self$prop$dataset_definitions[[len+1]]<- list(
-     status = list(text=list(.value="shared")),
+     status = list(text=list(.value=status)),
      name = list(text=list(.value= if(is.na(name)) names(df) else name)),
-     type = list(.value="calculated"),
+     type = list(.value=type),
      itemcount = list(.value = nrow(df)),
      number_of_items = list(.value = nrow(df)),
      dataset_items = it

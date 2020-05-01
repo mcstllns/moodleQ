@@ -88,7 +88,11 @@ multichoice.default = config$new(
   "multichoice",
   '.attrs' = c(type='multichoice'),
   'name$text' = list(.value=NA),
-  'questiontext$text' = list(.value=NA, .cdata=TRUE),
+  'questiontext' = list(
+    .attrs = c(format = "html"),
+    text = list(.value=NA, .cdata=TRUE)),
+
+# '$text' = list(.value=NA, .cdata=TRUE),
   'defaultgrade' = list(.value=1),
   'penalty'	= list(.value=0),
   'hidden' = list(.value=0),
@@ -107,7 +111,10 @@ truefalse.default = config$new(
   "truefalse",
   '.attrs' = c(type='truefalse'),
   'name$text' = list(.value=NA),
-  'questiontext$text' = list(.value=NA, .cdata=TRUE))
+  'questiontext' = list(
+    .attrs = c(format = "html"),
+    text = list(.value=NA, .cdata=TRUE)))
+
 
 category.default = config$new(
   "category",
@@ -119,14 +126,18 @@ description.default = config$new(
   "description",
   '.attrs' = c(type='description'),
   'name$text' = list(.value=NA),
-  'questiontext$text' = list(.value=NA, .cdata=TRUE),
+  'questiontext' = list(
+    .attrs = c(format = "html"),
+    text = list(.value=NA, .cdata=TRUE)),
   'format' = list(.value='html'))
 
 essay.default = config$new(
   "essay",
   '.attrs' = c(type='essay'),
   'name$text' = list(.value=NA),
-  'questiontext$text' = list(.value=NA, .cdata=TRUE),
+  'questiontext' = list(
+    .attrs = c(format = "html"),
+    text = list(.value=NA, .cdata=TRUE)),
   'defaultgrade' = list(.value=1),
   'penalty'	= list(.value=0),
   'hidden' = list(.value=0),
@@ -138,19 +149,26 @@ shortanswer.default = config$new(
   "shortanswer",
   '.attrs' = c(type='shortanswer'),
   'name$text' = list(.value=NA),
-  'questiontext$text' = list(.value=NA, .cdata=TRUE))
+  'questiontext' = list(
+    .attrs = c(format = "html"),
+    text = list(.value=NA, .cdata=TRUE)))
+
 
 numerical.default = config$new(
   "numerical",
   '.attrs' = c(type='numerical'),
   'name$text' = list(.value=NA),
-  'questiontext$text' = list(.value=NA, .cdata=TRUE))
+  'questiontext' = list(
+    .attrs = c(format = "html"),
+    text = list(.value=NA, .cdata=TRUE)))
 
 calculated.default = config$new(
   "calculated",
   '.attrs' = c(type='calculated'),
   'name$text' = list(.value=NA),
-  'questiontext$text' = list(.value=NA, .cdata=TRUE),
+  'questiontext' = list(
+    .attrs = c(format = "html"),
+    text = list(.value=NA, .cdata=TRUE)),
   'defaultgrade' = list(.value=1),
   'penalty'	= list(.value=0),
   'hidden' = list(.value=0),

@@ -35,6 +35,7 @@ quiz$set("public", "add", function(...) private$addqs(list(...)))
 # -------------------------------------------
 quiz$set("private", "addqs",
   function(l){
+   if (length(l) == 0) return()
    n = length(self$quiz)
    for (i in 1:length(l)) self$quiz[[n+i]] <- l[[i]]
   })
