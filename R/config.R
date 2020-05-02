@@ -7,29 +7,24 @@
 
 
 
-#' @description
-#' Carga una configuración previamente guardada
+#' Clase R6 para la gestion de las preguntas de moodle
 #'
-#' @details
-#' Estos son los detalles de la clase
+#' @description
+#' creación de bancos de preguntas para moodle con clases R
+#'
+#' Manual: \url{https://mcstllns.github.io/moodleQ/}
 #' @export
 loadQconfig <- function(file){ load(file); return(self)}
 
 
 
 # -------------------------------------------
-#' Clase R6 para la gestion de los modelos de pregunta
+#' Clase R6 para la gestion de las preguntas de moodle
 #'
 #' @description
-#' Gestiona las definiciones de preguntas
+#' creación de bancos de preguntas para moodle con clases R
 #'
-#' @details
-#' Esta clase permite utilizar y modificar definiciones de preguntas típicas de los cuestionarios de moodle. También permite crear una definición propia.
-#'
-#' Las definiciones de moodle son: multichoice|truefalse|shortanswer|essay|numerical|description. Las preguntas cloze y matching aún no están definidas.
-#'
-#' La definiciones se pueden ver en esta página: https://docs.moodle.org/all/es/Formato_Moodle_XML
-#'
+#' Manual: \url{https://mcstllns.github.io/moodleQ/}
 #' @export
 # -------------------------------------------
 config <- R6::R6Class("moodleQConfig",

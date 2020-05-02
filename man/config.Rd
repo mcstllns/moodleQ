@@ -2,16 +2,11 @@
 % Please edit documentation in R/config.R
 \name{config}
 \alias{config}
-\title{Clase R6 para la gestion de los modelos de pregunta}
+\title{Clase R6 para la gestion de las preguntas de moodle}
 \description{
-Gestiona las definiciones de preguntas
-}
-\details{
-Esta clase permite utilizar y modificar definiciones de preguntas típicas de los cuestionarios de moodle. También permite crear una definición propia.
+creación de bancos de preguntas para moodle con clases R
 
-Las definiciones de moodle son: multichoice|truefalse|shortanswer|essay|numerical|description. Las preguntas cloze y matching aún no están definidas.
-
-La definiciones se pueden ver en esta página: https://docs.moodle.org/all/es/Formato_Moodle_XML
+Manual: \url{https://mcstllns.github.io/moodleQ/}
 }
 \section{Methods}{
 \subsection{Public methods}{

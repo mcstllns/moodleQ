@@ -12,14 +12,12 @@
 # source("questions.R")
 
 
-# -------------------------------------------
-#' Clase R6 para la gestion de los cuestionarios
+#' Clase R6 para la gestion de las preguntas de moodle
 #'
 #' @description
-#' Gestiona los cuestionarios
+#' creación de bancos de preguntas para moodle con clases R
 #'
-#' @details
-#' Crea cuestionarios compuestos por preguntas moodleQ
+#' Manual: \url{https://mcstllns.github.io/moodleQ/}
 #' @export
 quiz <- R6::R6Class("moodleQQuiz",
       public = list(

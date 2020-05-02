@@ -5,9 +5,10 @@ Authors@R:
     person(given = "Miguel A.",
            family = "Castellanos",
            role = c("aut", "cre"),
-           email = "mcastellanos@ucm.es",
-           comment = c(Web = "https://mcastellanos.ucm.es"))
-Description: Gestión de preguntas desde un marco de clases R6.
+           email = "mcastellanos@psi.ucm.es",
+           comment = c(Web = "https://mcstllns.github.io/moodleQ/"))
+URL: https://mcstllns.github.io/moodleQ/
+Description: Gestión de preguntas de moodle desde un marco de clases R6.
 License: What license it uses
 Encoding: UTF-8
 LazyData: true

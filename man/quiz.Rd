@@ -2,12 +2,11 @@
 % Please edit documentation in R/quiz.R
 \name{quiz}
 \alias{quiz}
-\title{Clase R6 para la gestion de los cuestionarios}
+\title{Clase R6 para la gestion de las preguntas de moodle}
 \description{
-Gestiona los cuestionarios
-}
-\details{
-Crea cuestionarios compuestos por preguntas moodleQ
+creación de bancos de preguntas para moodle con clases R
+
+Manual: \url{https://mcstllns.github.io/moodleQ/}
 }
 \section{Methods}{
 \subsection{Public methods}{

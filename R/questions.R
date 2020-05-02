@@ -4,16 +4,9 @@
 #' Clase R6 para la gestion de las preguntas de moodle
 #'
 #' @description
-#' Esta clase crea, gestiona y salva como un fichero .xml las preguntas generadas por moodleQ
+#' creación de bancos de preguntas para moodle con clases R
 #'
-#'
-#' @details
-#' Permite crear preguntas de la clase moodleQ
-#' @examples
-#' q0 <- question$new(
-#'  type="category",
-#'  'name' = 'P000',
-#'  'category' = "$course$/pruebas_moodleQ")
+#' Manual: \url{https://mcstllns.github.io/moodleQ/}
 #' @export
 # -------------------------------------------
 question <- R6::R6Class("moodleQQuestion",
