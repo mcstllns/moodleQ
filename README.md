@@ -1,5 +1,21 @@
-
+1
 ![](https://mcstllns.github.io/moodleQ/docs/images/logo.png)
+
+2
+![](/docs/images/logo.png)
+
+3
+![](./docs/images/logo.png)
+
+4
+![](docs/images/logo.png)
+
+5
+![](https://mcstllns.github.io/moodleQ/images/logo.png)
+
+6
+![](https://github.com/mcstllns/moodleQ/docs/images/logo.png)
+
 
 ***
 __Miguel A. Castellanos__
