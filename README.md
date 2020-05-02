@@ -1,21 +1,5 @@
-1
-![](https://mcstllns.github.io/moodleQ/docs/images/logo.png)
 
-2
-![](/docs/images/logo.png)
-
-3
 ![](./docs/images/logo.png)
-
-4
-![](docs/images/logo.png)
-
-5
-![](https://mcstllns.github.io/moodleQ/images/logo.png)
-
-6
-![](https://github.com/mcstllns/moodleQ/docs/images/logo.png)
-
 
 ***
 __Miguel A. Castellanos__
@@ -25,8 +9,6 @@ mcastellanos\@psi.ucm.es
 Universidad Complutense de Madrid
 
 ***
-Tiene que ser mas cambio 
-
 
 __moodleQ__ es una librería de R para la creación de bancos de preguntas para moodle desde una perspectiva basada en clases R6 y programación orientada a objetos (POO), permite crear fácilmente preguntas de los principales tipos que tiene moodle. Las preguntas se salvan en un fichero xml que es importado en moodle dentro de su banco de preguntas, este sistema es mucho más rápido que crear una a una las preguntas usando la interfaz gráfica de moodle y permite diseñar cuestionarios más complejos.
 
