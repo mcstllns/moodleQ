@@ -1,5 +1,5 @@
 
-![](/images/logo.png)
+![](images/logo.png)
 
 ***
 __Miguel A. Castellanos__
