@@ -10,36 +10,38 @@ Universidad Complutense de Madrid
 
 ***
 
-__moodleQ__ es una librería de R para la creación de bancos de preguntas para moodle desde una perspectiva basada en clases R6 y programación orientada a objetos (POO), permite crear fácilmente preguntas de los principales tipos que tiene moodle. Las preguntas se salvan en un fichero xml que es importado en moodle dentro de su banco de preguntas, este sistema es mucho más rápido que crear una a una las preguntas usando la interfaz gráfica de moodle y permite diseñar cuestionarios más complejos.
+__moodleQ__ is an R package for the creation of question banks for moodle from a perspective based on R6 classes and object oriented programming (OOP), it allows you to easily create questions of the main types that moodle has. The questions are saved in an xml file that is imported into moodle into your question bank. This system is much faster than creating questions one by one using moodle's graphical interface and allows you to design more complex questionnaires.
 
-Algunas de las cosas que permite hacer son:
+Some of the things it allows you to do are:
 
-* Construir cuestionarios muy rápidamente desde ficheros o bases de datos.
-* Preparar exámenes de forma sencilla con problemas y documentos en cualquier formato incrustados en las preguntas.
-* Crear preguntas con bases de datos incrustadas para ser descargadas y analizadas individualizadas para cada alumno.
+* Build questionnaires very quickly from files or databases.
+* Prepare exams easily with problems and documents in any format embedded in the questions.
+* Create questions with embedded databases to be downloaded and analyzed individually for each student.
 
 ***
 
-## Instalación y primeros pasos
+## Installation and first steps
 
-El paquete se puede instalar vía devtools y github
+The package can be installed via devtools and github
 
 ```R
 devtools::install_github("mcstllns/moodleQ")
 ```
 
-Si no está instalado previamente devtools puede instalarse con
+If not already installed, devtools can be installed with
 
 ```R
 install.packages("devtools")
 ```
 
-y una vez instalado el paquete se carga con
+and once the package is installed it is loaded with
+
 ```R
 library(moodleQ)
 ```
 
-Las preguntas se crean invocando al constructor _question$new()_. Los argumentos de la función son los parámetros que definen una pregunta. Cada tipo de pregunta tiene definidos unos parámetros o campos por defecto que hay que completar para que sea una pregunta válida, muchos de esos parámetros han sido definidos por defecto, aunque se pueden modificar (ver las configuraciones por defecto al final de este documento); por ejemplo, se pueden modificar los argumentos _single_, _shuffleanswer_ y _answernumbering_ para cambiar la forma de marcar, la aleatorización y el numerado de las alternativas de la pregunta respectivamente. La pregunta es integrada en el cuestionario Q que es salvado en xml para ser importado en el banco de preguntas de moodle.
+The questions are created by invoking the constructor _question$new()_. The function arguments are the parameters that define a question. Each question type has defined default parameters or fields that must be filled in for it to be a valid question. Many of these parameters have been defined by default, although they can be modified (see the default settings at the end of this document); for example, the _single_, _shuffleanswer_ and _answernumbering_ arguments can be modified to change the way the question's alternatives are marked, randomized and numbered, respectively. The question is integrated into the Q questionnaire which is saved in xml to be imported into the moodle question bank.
+
 
 ```R
 q1 <- question$new(
@@ -62,11 +64,12 @@ Q$save_xml('myfile.xml')
 
 ***
 
-## Documentación
+## Documentation
 
-* Ir a la página con la documentación: [mcstllns.github.io/moodleQ/](https://mcstllns.github.io/moodleQ/)
-* Descargar la documentación en pdf y con código de ejemplo: [moodleQ-man.zip](./docs/moodleQ-man.zip)
-* Ir a la página de github: [mcstllns/moodleQ](https://github.com/mcstllns/moodleQ)
+* Go to the page with the documentation: [mcstllns.github.io/moodleQ/](https://mcstllns.github.io/moodleQ/)
+* Download the documentation in pdf and example code: moodleQ-man.zip](./docs/moodleQ-man.zip)
+* Go to the github page: [mcstllns/moodleQ](https://github.com/mcstllns/moodleQ)
+
 
 
 
