@@ -15,7 +15,7 @@ __moodleQ__ is an R package for the creation of question banks for moodle from a
 Some of the things it allows you to do are:
 
 * Build questionnaires very quickly from files or databases.
-* Prepare exams easily with problems and documents in any format embedded in the questions.
+* Prepare exams easily with questions and documents in any format embedded in the questions.
 * Create questions with embedded databases to be downloaded and analyzed individually for each student.
 
 ***
