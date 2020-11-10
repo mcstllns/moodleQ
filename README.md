@@ -67,7 +67,7 @@ Q$save_xml('myfile.xml')
 ## Documentation
 
 * Go to the page with the documentation: [mcstllns.github.io/moodleQ/](https://mcstllns.github.io/moodleQ/)
-* Download the documentation in pdf and example code: moodleQ-man.zip](./docs/moodleQ-man.zip)
+* Download the documentation in pdf and example code: [moodleQ-man.zip](./docs/moodleQ-man.zip)
 * Go to the github page: [mcstllns/moodleQ](https://github.com/mcstllns/moodleQ)
 
 
