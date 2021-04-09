@@ -9,7 +9,7 @@ Authors@R:
            comment = c(Web = "https://mcstllns.github.io/moodleQ/")),
     person(given = "Jose C.",
        family = "Chacón",
-       role = c("aut", "cre"),
+       role = "aut",
        email = "jchacon@psi.ucm.es",
        comment = c(Web = "https://mcstllns.github.io/moodleQ/")))
 URL: https://mcstllns.github.io/moodleQ/
