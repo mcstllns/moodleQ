@@ -2,11 +2,16 @@ Package: moodleQ
 Title: Creación de preguntas en xml moodle.
 Version: 0.5.3
 Authors@R: 
-    person(given = "Miguel A.",
+    c(person(given = "Miguel A.",
            family = "Castellanos",
            role = c("aut", "cre"),
            email = "mcastellanos@psi.ucm.es",
-           comment = c(Web = "https://mcstllns.github.io/moodleQ/"))
+           comment = c(Web = "https://mcstllns.github.io/moodleQ/")),
+    person(given = "Jose C.",
+       family = "Chacón",
+       role = c("aut", "cre"),
+       email = "jchacon@psi.ucm.es",
+       comment = c(Web = "https://mcstllns.github.io/moodleQ/")))
 URL: https://mcstllns.github.io/moodleQ/
 Description: Gestión de preguntas de moodle desde un marco de clases R6.
 License: What license it uses
