@@ -2,9 +2,11 @@
 ![](./docs/images/logo.png)
 
 ***
-__Miguel A. Castellanos__
+__Miguel A. Castellanos and José C. Chacón__
 
 mcastellanos\@psi.ucm.es
+jchacon\@psi.ucm.es
+
 
 Universidad Complutense de Madrid
 
