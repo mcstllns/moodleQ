@@ -5,12 +5,14 @@
 __Miguel A. Castellanos__ and __José C. Chacón__
 
 mcastellanos\@psi.ucm.es
-jchacon\@psi.ucm.es
+jchacon\@psi.ucm.es 
 
 
 Universidad Complutense de Madrid
 
 ***
+
+prueba
 
 __moodleQ__ is an R package for the creation of question banks for moodle from a perspective based on R6 classes and object oriented programming (OOP), it allows you to easily create questions of the main types that moodle has. The questions are saved in an xml file that is imported into moodle into your question bank. This system is much faster than creating questions one by one using moodle's graphical interface and allows you to design more complex questionnaires.
 
